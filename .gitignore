@@ -1,0 +1,5 @@
+build/*
+external/*
+escapi
+qzxing_prebuilt
+INSTALL
