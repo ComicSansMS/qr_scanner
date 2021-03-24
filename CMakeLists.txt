@@ -83,6 +83,7 @@ add_executable(qr_scanner WIN32
     ${QR_QT_MOC_SOURCE_FILES}
 )
 target_include_directories(qr_scanner PUBLIC ${QR_INCLUDE_DIR})
+target_sources(qr_scanner PUBLIC $<$<CXX_COMPILER_ID:MSVC>:${PROJECT_SOURCE_DIR}/resources/resource.rc>)
 target_link_libraries(qr_scanner PUBLIC escapi qzxing Qt5::Widgets Ghulbus::gbBase fmt::fmt)
 if(WIN32)
     #target_link_libraries(qr_scanner PUBLIC Qt5::WinMain)
